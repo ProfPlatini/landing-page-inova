@@ -1,11 +1,9 @@
 name: Publicar LockSafe no GitHub Pages
 
+# Publicação suspensa até autorização da equipe após a final.
+# O workflow também está desativado nas configurações do GitHub Actions.
+# Pushes não publicam o projeto; uma futura publicação exige reativação manual.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'dist/**'
-      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:

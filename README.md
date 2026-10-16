@@ -6,12 +6,18 @@ Versão atualizada para apresentação do projeto finalista do INOVA SENAI 2026.
 
 Repositório: https://github.com/ProfPlatini/landing-page-inova
 
+**Publicação suspensa até a final.** O repositório foi tornado privado e o workflow de publicação foi desativado. Os quatro vídeos foram testados com reprodução real no navegador e estão íntegros. Erros 404 no Pages após a retirada da publicação são falhas de disponibilidade da hospedagem, não dos arquivos. Alguns endereços antigos podem permanecer em cache temporariamente.
+
+Para revisar antes da final, use a prévia privada do Sites ou a página local. Não reative Pages enquanto o conteúdo precisar permanecer reservado.
+
+Quando a equipe autorizar a divulgação:
+
 1. No repositório, abra **Settings → Pages**.
 2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
-3. Abra **Actions → Publicar LockSafe no GitHub Pages → Run workflow**, selecione `main` e execute.
+3. Abra **Actions → Publicar LockSafe no GitHub Pages**, reative o workflow, clique em **Run workflow**, selecione `main` e execute.
 4. Aguarde a execução concluir. O endereço de publicação aparecerá em Settings → Pages e no resumo da execução.
 
-O workflow publica somente `dist/`. Os caminhos de imagens, vídeos, estilos e scripts são relativos e funcionam no subdiretório do GitHub Pages. Novos pushes que alterem `dist/` na branch `main` atualizam o site automaticamente depois da ativação inicial. Se a primeira execução acontecer antes de habilitar Pages, execute-a novamente após selecionar GitHub Actions.
+O workflow publica somente `dist/`. Os caminhos de imagens, vídeos, estilos e scripts são relativos e funcionam no subdiretório do GitHub Pages. Pushes na branch `main` não publicam o site; o workflow aceita apenas execução manual. Se a primeira execução acontecer antes de habilitar Pages, execute-a novamente após selecionar GitHub Actions.
 
 Configuração baseada na documentação: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
