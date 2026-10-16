@@ -2,6 +2,19 @@
 
 Versão atualizada para apresentação do projeto finalista do INOVA SENAI 2026.
 
+## Publicação no GitHub Pages
+
+Repositório: https://github.com/ProfPlatini/landing-page-inova
+
+1. No repositório, abra **Settings → Pages**.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
+3. Abra **Actions → Publicar LockSafe no GitHub Pages → Run workflow**, selecione `main` e execute.
+4. Aguarde a execução concluir. O endereço de publicação aparecerá em Settings → Pages e no resumo da execução.
+
+O workflow publica somente `dist/`. Os caminhos de imagens, vídeos, estilos e scripts são relativos e funcionam no subdiretório do GitHub Pages. Novos pushes que alterem `dist/` na branch `main` atualizam o site automaticamente depois da ativação inicial. Se a primeira execução acontecer antes de habilitar Pages, execute-a novamente após selecionar GitHub Actions.
+
+Configuração baseada na documentação: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+
 ## Publicação em hospedagem própria
 
 A página é estática: envie todo o conteúdo de `dist/` para a pasta pública da hospedagem. O arquivo `index.html` precisa ficar na raiz pública, ao lado de `styles.css`, `script.js` e da pasta `assets/`. Não exige banco de dados, servidor de aplicação ou instalação de dependências. Ative HTTPS e aponte o domínio conforme as instruções do provedor escolhido.
