@@ -9,21 +9,47 @@ menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeM
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.classList.contains('open')) { closeMenu(); menuToggle.focus(); } });
 const video = document.querySelector('#demo-video');
 const demos = {
-  lock: { label: 'sem EPI: máquina bloqueada', caption: 'Teste em bancada · Condição sem EPI: acionamento bloqueado.' },
-  safe: { label: 'com EPI: máquina liberada', caption: 'Teste em bancada · Condição com EPI: acionamento liberado.' }
+  '1': { label: 'sem capacete', caption: 'Sem capacete · Teste com sinalização de bloqueio no painel.' },
+  '2': { label: 'com capacete', caption: 'Com capacete · Teste com sinalização de liberação no painel.' },
+  '3': { label: 'integração em bancada', caption: 'Integração em bancada · Câmera, aplicação, placa de controle e máquina.' },
+  '4': { label: 'detecção de EPI', caption: 'Detecção de EPI · Registro da verificação durante o teste.' }
 };
 document.querySelectorAll('.demo-tab').forEach(button => button.addEventListener('click', () => {
   if (button.getAttribute('aria-pressed') === 'true') return;
   const key = button.dataset.demo;
   video.pause();
-  video.src = `assets/demonstracao-${key}.mp4`;
-  video.poster = `assets/demonstracao-${key}.png`;
-  video.setAttribute('aria-label', `Demonstração do protótipo ${demos[key].label}`);
+  video.src = `assets/demo-${key}.mp4`;
+  video.poster = `assets/demo-${key}.jpg`;
+  video.setAttribute('aria-label', `Demonstração ${demos[key].label}`);
   video.querySelector('a').href = video.src;
   video.load();
+  document.querySelector('#demo-count').textContent = `0${key} / 04`;
   document.querySelector('#demo-caption').textContent = demos[key].caption;
   document.querySelectorAll('.demo-tab').forEach(tab => { const selected = tab === button; tab.classList.toggle('active', selected); tab.setAttribute('aria-pressed', String(selected)); });
 }));
+// Evita áudio simultâneo entre a demonstração real e o vídeo de personalização.
+document.querySelectorAll('video').forEach(player => player.addEventListener('play', () => {
+  document.querySelectorAll('video').forEach(other => { if (other !== player) other.pause(); });
+}));
+const track = document.querySelector('#tech-track');
+const duplicate = track.querySelector('.tech-group').cloneNode(true);
+duplicate.setAttribute('aria-hidden', 'true');
+duplicate.setAttribute('inert', '');
+duplicate.querySelectorAll('a').forEach(link => link.tabIndex = -1);
+track.append(duplicate);
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const pauseButton = document.querySelector('.marquee-toggle');
+let manuallyPaused = false;
+function updateMotion() {
+  const paused = manuallyPaused || motionPreference.matches;
+  track.classList.toggle('paused', paused);
+  pauseButton.setAttribute('aria-pressed', String(paused));
+  pauseButton.textContent = motionPreference.matches ? 'Movimento reduzido' : paused ? 'Retomar animação ▶' : 'Pausar animação Ⅱ';
+  pauseButton.disabled = motionPreference.matches;
+}
+pauseButton.addEventListener('click', () => { manuallyPaused = !manuallyPaused; updateMotion(); });
+motionPreference.addEventListener('change', updateMotion);
+updateMotion();
 let availableContacts = 0;
 for (const [key, rawValue] of Object.entries(CONTACT)) {
   const value = rawValue.trim();
