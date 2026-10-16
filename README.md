@@ -23,7 +23,7 @@ A prévia do Sites é privada. Para visitantes do evento, use a hospedagem públ
 
 ## Contatos
 
-Os valores estão intencionalmente vazios no início de `dist/script.js`, em `CONTACT`. Preencha `email`, `whatsapp` (com código do país e DDD) e `linkedin` (URL completa HTTPS). Os links são ativados quando houver valores. Esta versão não coleta dados nem envia formulários.
+O e-mail oficial é `locksafe.2026@gmail.com`. WhatsApp e LinkedIn permanecem vazios no início de `dist/script.js`, em `CONTACT`. Preencha `email`, `whatsapp` (com código do país e DDD) e `linkedin` (URL completa HTTPS). Os links são ativados quando houver valores. Esta versão não coleta dados nem envia formulários.
 
 ## Conteúdo e identidade
 

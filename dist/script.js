@@ -1,6 +1,6 @@
 'use strict';
 // Preencher quando os canais oficiais forem definidos. Valores vazios não geram links.
-const CONTACT = { email: '', whatsapp: '', linkedin: '' };
+const CONTACT = { email: 'locksafe.2026@gmail.com', whatsapp: '', linkedin: '' };
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#menu');
 function closeMenu() { menu.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Abrir menu'); }
