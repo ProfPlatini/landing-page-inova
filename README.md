@@ -31,8 +31,8 @@ O e-mail oficial é `locksafe.2026@gmail.com`. WhatsApp e LinkedIn permanecem va
 
 - Conteúdo principal: apresentação LockSafe_PitchDay_INOVA2026_v4.pptx fornecida pela equipe.
 - Foto: imagem da equipe enviada pelo usuário, otimizada em WebP.
-- Quatro vídeos reais: arquivos enviados em 16/10/2026 (10.52.36, 10.52.38, 10.52.43 e 10.52.45), preservados sem recompressão.
-- Personalização: vídeo extraído do slide 5 da apresentação, em seção própria.
+- Quatro vídeos reais: arquivos enviados em 16/10/2026 (10.52.36, 10.52.38, 10.52.43 e 10.52.45), com áudio removido e imagem preservada sem recompressão.
+- Personalização: vídeo extraído do slide 5 da apresentação, em seção própria, com efeito original de digitação.
 - Fotografia da placa: extraída da apresentação; imagem do Raspberry Pi 5 fornecida pelo usuário.
 - Logo original: preservada em `dist/assets/logo-original.png`. O cabeçalho utiliza uma assinatura tipográfica e símbolo vetorial simplificado para legibilidade na web.
 - Regulamentos e material de alinhamento foram referências de contexto. Não foram disponibilizados para download na página.
@@ -60,3 +60,7 @@ Faixa animada com pausa, navegação por teclado e respeito a movimento reduzido
 - os, time e threading são identificados como módulos nativos Python.
 
 YOLO e compatibilidade Windows/Linux foram incluídos conforme informação da equipe. O trecho de código fornecido utiliza OpenAI, Agno, OpenCV, pySerial e python-dotenv; Picamera2 é opcional para Raspberry Pi. O código-fonte da aplicação de controle não é publicado com a landing page.
+
+## Domínio próprio
+
+Veja [o guia de publicação e domínio](GUIA-DEPLOY-E-DOMINIO.md) para conectar um endereço .com.br ao GitHub Pages.

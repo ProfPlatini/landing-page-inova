@@ -18,7 +18,7 @@ document.querySelectorAll('.demo-tab').forEach(button => button.addEventListener
   if (button.getAttribute('aria-pressed') === 'true') return;
   const key = button.dataset.demo;
   video.pause();
-  video.src = `assets/demo-${key}.mp4`;
+  video.src = `assets/demo-${key}-silent.mp4`;
   video.poster = `assets/demo-${key}.jpg`;
   video.setAttribute('aria-label', `Demonstração ${demos[key].label}`);
   video.querySelector('a').href = video.src;
