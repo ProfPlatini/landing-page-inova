@@ -21,3 +21,20 @@
 .board-hero .visual-caption strong{font-size:30px}
 .board-hero .image-note{position:static;padding:12px 4px 20px;font-size:9px}
 @media(max-width:800px){.board-hero{padding:12px 12px 0}.board-hero>img{padding:0}.board-hero .visual-caption strong{font-size:28px}}
+
+/* Divulgação regional: reportagem no jornal O Liberal. */
+.press-section{padding:76px 0;background:#e9eeeb;border-bottom:1px solid #d3ddda}
+.press-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:70px;align-items:center}
+.press-intro h2{font-size:clamp(38px,4vw,55px);margin-bottom:22px}
+.press-intro>p:last-child{font-size:14px;color:#526670;max-width:440px;line-height:1.85;margin-bottom:0}
+.press-article{border-top:3px solid var(--orange);padding:28px 30px;background:var(--paper)}
+.press-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}
+.press-publication{font-family:Georgia,serif;font-size:29px;font-weight:700;letter-spacing:-1px;color:var(--navy)}
+.press-meta time{font-size:10px;color:#536771}
+.press-category{font-size:9px;letter-spacing:1.6px;color:#9c401b;font-weight:600}
+.press-article h3{font-family:var(--display);font-size:32px;line-height:1.15;font-weight:600;margin:14px 0 26px}
+.press-link{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;font-size:12px;font-weight:650;padding:12px 0;border-bottom:1px solid #9c401b;color:#9c401b}
+.press-link:hover{color:var(--navy);border-color:var(--navy)}
+.press-link>span[aria-hidden]{font-size:20px;line-height:1}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:800px){.press-section{padding:50px 0}.press-grid{grid-template-columns:1fr;gap:30px}.press-intro>p:last-child{max-width:600px}.press-article{padding:24px}.press-meta{flex-wrap:wrap;gap:10px;margin-bottom:25px}.press-article h3{font-size:30px}.press-link{font-size:12px}}
