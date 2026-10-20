@@ -50,7 +50,7 @@ Sintaxe JavaScript; links internos; carregamento de imagens e vídeo; troca das 
 
 ## Tecnologias e marcas
 
-Faixa animada com pausa, navegação por teclado e respeito a movimento reduzido. Identifica tecnologias do projeto, sem afirmar patrocínio.
+Faixa animada com pausa, navegação por teclado e respeito a movimento reduzido. Identifica tecnologias do projeto, sem afirmar patrocínio. Ícones vetoriais coloridos; versões monocromáticas receberam cores de apresentação, preservando os desenhos.
 
 - Agno: https://agno-public.s3.us-east-1.amazonaws.com/assets/logo-light.svg
 - OpenCV: https://opencv.org/media-kit/
