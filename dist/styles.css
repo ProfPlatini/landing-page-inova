@@ -11,3 +11,13 @@
 @media(max-width:800px){.gallery-layout{grid-template-columns:1fr}.demo-playlist{grid-template-columns:1fr 1fr;padding-top:0;gap:10px}.gallery-tab{flex-direction:column;align-items:stretch;padding:8px;gap:10px}.thumb{width:100%;flex-basis:auto}.gallery-label{padding:0 3px 3px}.gallery-label strong{font-size:13px}.gallery-label>span{font-size:9px}.customization{grid-template-columns:1fr;gap:28px;margin-top:45px;padding-top:40px}.customization h3{font-size:40px}.customization-copy>p:not(.eyebrow){max-width:600px}.technology-section{padding:55px 0}.technology-heading{align-items:start;flex-direction:column;gap:22px}.technology-heading h2{font-size:39px}.tech-group{gap:38px;padding:25px 19px}.tech-item{font-size:16px}.tech-detail{flex-direction:column;gap:8px;font-size:9px}.raspberry-grid{grid-template-columns:1fr;gap:35px;margin-top:45px}.raspberry-image>img{height:280px;width:100%}.raspberry-copy h2{font-size:49px}.board-hero{height:400px}.board-hero>img{padding-bottom:110px}}
 @media(prefers-reduced-motion:reduce){.tech-marquee{overflow-x:auto;mask-image:none}.tech-track{animation:none!important;transform:none}.tech-group[aria-hidden=true]{display:none}}
 .thumb img{height:auto}
+
+/* Foto atualizada: placa inteira, legenda fora da imagem e LEDs sem escurecimento. */
+.board-hero{height:auto;display:flex;flex-direction:column;padding:20px 20px 0}
+.board-hero>img{width:100%;height:auto;object-fit:contain;object-position:center;padding:0;filter:none;transform:none}
+.board-hero:after{display:none}
+.board-hero .target{display:none}
+.board-hero .visual-caption{position:static;padding:18px 4px 0}
+.board-hero .visual-caption strong{font-size:30px}
+.board-hero .image-note{position:static;padding:12px 4px 20px;font-size:9px}
+@media(max-width:800px){.board-hero{padding:12px 12px 0}.board-hero>img{padding:0}.board-hero .visual-caption strong{font-size:28px}}
