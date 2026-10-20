@@ -1,66 +1,12 @@
-# LockSafe — landing page
+# LockSafe
 
-Versão atualizada para apresentação do projeto finalista do INOVA SENAI 2026.
+Página pública do projeto LockSafe, finalista do INOVA SENAI 2026.
 
-## Publicação no GitHub Pages
+- Site: https://locksafe.app.br/
+- Contato: locksafe.2026@gmail.com
 
-Repositório: https://github.com/ProfPlatini/landing-page-inova
+O conteúdo do site está em `dist/`. O GitHub Pages publica essa pasta pelo workflow em `.github/workflows/pages.yml`.
 
-O repositório e o GitHub Pages são públicos, conforme autorizado pela equipe. A publicação usa GitHub Actions e envia somente a pasta `dist/`.
+## Créditos das marcas
 
-1. No repositório, abra **Settings → Pages**.
-2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
-3. Abra **Actions → Publicar LockSafe no GitHub Pages → Run workflow**, selecione `main` e execute.
-4. Aguarde a execução concluir. O endereço de publicação aparecerá em Settings → Pages e no resumo da execução.
-
-O workflow publica somente `dist/`. Os caminhos de imagens, vídeos, estilos e scripts são relativos e funcionam no subdiretório do GitHub Pages. Pushes que alterem `dist/` na branch `main` publicam automaticamente a versão atualizada. Se a primeira execução acontecer antes de habilitar Pages, execute-a novamente após selecionar GitHub Actions.
-
-Configuração baseada na documentação: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
-
-## Publicação em hospedagem própria
-
-A página é estática: envie todo o conteúdo de `dist/` para a pasta pública da hospedagem. O arquivo `index.html` precisa ficar na raiz pública, ao lado de `styles.css`, `script.js` e da pasta `assets/`. Não exige banco de dados, servidor de aplicação ou instalação de dependências. Ative HTTPS e aponte o domínio conforme as instruções do provedor escolhido.
-
-A prévia do Sites é privada. Para visitantes do evento, use a hospedagem pública de sua escolha ou altere explicitamente a audiência da prévia posteriormente.
-
-## Contatos
-
-O e-mail oficial é `locksafe.2026@gmail.com`. WhatsApp e LinkedIn permanecem vazios no início de `dist/script.js`, em `CONTACT`. Preencha `email`, `whatsapp` (com código do país e DDD) e `linkedin` (URL completa HTTPS). Os links são ativados quando houver valores. Esta versão não coleta dados nem envia formulários.
-
-## Conteúdo e identidade
-
-- Conteúdo principal: apresentação LockSafe_PitchDay_INOVA2026_v4.pptx fornecida pela equipe.
-- Foto: imagem da equipe enviada pelo usuário, otimizada em WebP.
-- Quatro vídeos reais: arquivos enviados em 16/10/2026 (10.52.36, 10.52.38, 10.52.43 e 10.52.45), com áudio removido e imagem preservada sem recompressão.
-- Personalização: vídeo extraído do slide 5 da apresentação, em seção própria, com o áudio de teclado fornecido pelo usuário (`magiaz-teclado-371743.mp3`), recortado em oito trechos sincronizados com as alterações nas linhas do código; as pausas visuais permanecem sem som.
-- Fotografia da placa: atualizada com a foto enviada em 19/10/2026, com LEDs e visor. Fundo removido e frase “Coloque o EPI” completada no visor usando a ferramenta integrada de edição de imagens. A legenda identifica a edição. Imagem do Raspberry Pi 5 fornecida pelo usuário.
-- Logo original: preservada em `dist/assets/logo-original.png`. O cabeçalho utiliza uma assinatura tipográfica e símbolo vetorial simplificado para legibilidade na web.
-- Regulamentos e material de alinhamento foram referências de contexto. Não foram disponibilizados para download na página.
-- Preços, estatísticas de acidentes, projeções financeiras e dados pessoais não foram publicados nesta primeira versão.
-- Os próximos passos aparecem como planejamento, e o estágio atual é apresentado como protótipo em bancada.
-- Fontes: DM Sans e Barlow Condensed, carregadas do Google Fonts, com fontes locais alternativas.
-
-## Ajustes para a versão de divulgação
-
-Completar os canais oficiais de contato e, se desejado, os nomes e funções dos integrantes. Confirmar cronograma, proposta comercial e história detalhada com a equipe. Após escolher o domínio, configurar o endereço canônico e a imagem de compartilhamento social.
-
-## Verificações
-
-Sintaxe JavaScript; links internos; carregamento de imagens e vídeo; troca das demonstrações; menu móvel; perguntas expansíveis; contatos em branco; ausência de rolagem horizontal em 1440 px e 390 px.
-
-## Tecnologias e marcas
-
-Faixa animada com pausa, navegação por teclado e respeito a movimento reduzido. Identifica tecnologias do projeto, sem afirmar patrocínio. Ícones vetoriais coloridos; versões monocromáticas receberam cores de apresentação, preservando os desenhos.
-
-- Agno: https://agno-public.s3.us-east-1.amazonaws.com/assets/logo-light.svg
-- OpenCV: https://opencv.org/media-kit/
-- YOLO: logotipo Ultralytics, https://github.com/ultralytics/assets
-- OpenAI, Python, Linux, Raspberry Pi e Windows: ícones do acervo Simple Icons (versões 13.21.0 e 11.15.0), https://github.com/simple-icons/simple-icons
-- pySerial, python-dotenv e Picamera2: símbolos genéricos acompanhados dos nomes, sem apresentá-los como logos oficiais.
-- os, time e threading são identificados como módulos nativos Python.
-
-YOLO e compatibilidade Windows/Linux foram incluídos conforme informação da equipe. O trecho de código fornecido utiliza OpenAI, Agno, OpenCV, pySerial e python-dotenv; Picamera2 é opcional para Raspberry Pi. O código-fonte da aplicação de controle não é publicado com a landing page.
-
-## Domínio próprio
-
-Veja [o guia de publicação e domínio](GUIA-DEPLOY-E-DOMINIO.md) para conectar um endereço .com.br ao GitHub Pages.
+As marcas apresentadas identificam tecnologias do projeto, sem indicar patrocínio. Fontes dos ícones: [Simple Icons](https://github.com/simple-icons/simple-icons), [OpenCV](https://opencv.org/media-kit/), [Agno](https://agno-public.s3.us-east-1.amazonaws.com/assets/logo-light.svg) e [Ultralytics](https://github.com/ultralytics/assets). Os símbolos de pySerial, python-dotenv e Picamera2 são ilustrações genéricas, não logotipos oficiais.
