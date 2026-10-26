@@ -39,16 +39,23 @@ duplicate.querySelectorAll('a').forEach(link => link.tabIndex = -1);
 track.append(duplicate);
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const pauseButton = document.querySelector('.marquee-toggle');
-let manuallyPaused = false;
+// Respeita a preferência inicial do aparelho, com controle disponível ao visitante.
+let motionChoice = null;
+const marquee = track.closest('.tech-marquee');
 function updateMotion() {
-  const paused = manuallyPaused || motionPreference.matches;
+  const paused = motionChoice ?? motionPreference.matches;
   track.classList.toggle('paused', paused);
+  track.classList.toggle('motion-enabled', !paused);
+  marquee.classList.toggle('motion-enabled', !paused);
+  if (!paused) marquee.scrollLeft = 0;
   pauseButton.setAttribute('aria-pressed', String(paused));
-  pauseButton.textContent = motionPreference.matches ? 'Movimento reduzido' : paused ? 'Retomar animação ▶' : 'Pausar animação Ⅱ';
-  pauseButton.disabled = motionPreference.matches;
+  pauseButton.textContent = paused ? 'Retomar animação ▶' : 'Pausar animação Ⅱ';
 }
-pauseButton.addEventListener('click', () => { manuallyPaused = !manuallyPaused; updateMotion(); });
-motionPreference.addEventListener('change', updateMotion);
+pauseButton.addEventListener('click', () => {
+  motionChoice = !(motionChoice ?? motionPreference.matches);
+  updateMotion();
+});
+motionPreference.addEventListener('change', () => { motionChoice = null; updateMotion(); });
 updateMotion();
 let availableContacts = 0;
 for (const [key, rawValue] of Object.entries(CONTACT)) {
