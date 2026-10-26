@@ -11,8 +11,8 @@
 !/.github/workflows/pages.yml
 !/.gitignore
 !/README.md
-!/dist/assets/demo-1-silent.mp4
-!/dist/assets/demo-1.jpg
+!/dist/assets/demonstracao-raspberry-20261026.mp4
+!/dist/assets/demonstracao-raspberry-20261026.jpg
 !/dist/assets/demo-2-silent.mp4
 !/dist/assets/demo-2.jpg
 !/dist/assets/demo-3-silent.mp4
@@ -23,7 +23,8 @@
 !/dist/assets/favicon.svg
 !/dist/assets/personalizacao-teclado-sincronizado.mp4
 !/dist/assets/personalizacao.png
-!/dist/assets/prototipo-led-20261019.webp
+!/dist/assets/prototipo-20261026.webp
+!/dist/assets/senai-sp.svg
 !/dist/assets/raspberry-pi-5.png
 !/dist/assets/tech/agno.svg
 !/dist/assets/tech/camera.svg

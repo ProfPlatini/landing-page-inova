@@ -1,6 +1,6 @@
 'use strict';
 // Preencher quando os canais oficiais forem definidos. Valores vazios não geram links.
-const CONTACT = { email: 'locksafe.2026@gmail.com', whatsapp: '', linkedin: '' };
+const CONTACT = { email: 'locksafe.2026@gmail.com', whatsapp: '', linkedin: '', instagram: 'locksafe2026' };
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#menu');
 function closeMenu() { menu.classList.remove('open'); menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Abrir menu'); }
@@ -9,7 +9,7 @@ menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeM
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.classList.contains('open')) { closeMenu(); menuToggle.focus(); } });
 const video = document.querySelector('#demo-video');
 const demos = {
-  '1': { label: 'sem capacete', caption: 'Sem capacete · Teste com sinalização de bloqueio no painel.' },
+  '1': { label: 'com análise em tempo real no Raspberry Pi 5', caption: 'Raspberry Pi 5 em tempo real · Bloqueio, liberação e retorno ao estado seguro durante a operação.', src: 'assets/demonstracao-raspberry-20261026.mp4', poster: 'assets/demonstracao-raspberry-20261026.jpg' },
   '2': { label: 'com capacete', caption: 'Com capacete · Teste com sinalização de liberação no painel.' },
   '3': { label: 'integração em bancada', caption: 'Integração em bancada · Câmera, aplicação, placa de controle e máquina.' },
   '4': { label: 'detecção de EPI', caption: 'Detecção de EPI · Registro da verificação durante o teste.' }
@@ -18,8 +18,8 @@ document.querySelectorAll('.demo-tab').forEach(button => button.addEventListener
   if (button.getAttribute('aria-pressed') === 'true') return;
   const key = button.dataset.demo;
   video.pause();
-  video.src = `assets/demo-${key}-silent.mp4`;
-  video.poster = `assets/demo-${key}.jpg`;
+  video.src = demos[key].src || `assets/demo-${key}-silent.mp4`;
+  video.poster = demos[key].poster || `assets/demo-${key}.jpg`;
   video.setAttribute('aria-label', `Demonstração ${demos[key].label}`);
   video.querySelector('a').href = video.src;
   video.load();
@@ -57,6 +57,7 @@ for (const [key, rawValue] of Object.entries(CONTACT)) {
   const cell = document.querySelector(`[data-contact="${key}"]`);
   const link = document.createElement('a');
   if (key === 'email') { link.href = `mailto:${value}`; link.textContent = value; }
+  if (key === 'instagram') { if (!/^[A-Za-z0-9._]+$/.test(value)) continue; link.href = `https://www.instagram.com/${value}/`; link.textContent = `@${value} ↗`; }
   if (key === 'whatsapp') { const digits = value.replace(/\D/g, ''); if (digits.length < 10) continue; link.href = `https://wa.me/${digits}`; link.textContent = value; }
   if (key === 'linkedin') { try { const url = new URL(value); if (url.protocol !== 'https:' || !/(^|\.)linkedin\.com$/.test(url.hostname)) continue; link.href = url.href; } catch { continue; } link.textContent = 'Conheça nosso perfil ↗'; }
   if (key !== 'email') { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
