@@ -22,22 +22,60 @@
 
 @media(max-width:800px){.board-hero{padding:12px 12px 0}.board-hero>img{padding:0}.board-hero .visual-caption strong{font-size:28px}}
 
-/* Divulgação regional: reportagem no jornal O Liberal. */
-.press-section{padding:76px 0;background:#e9eeeb;border-bottom:1px solid #d3ddda}
-.press-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:70px;align-items:center}
-.press-intro h2{font-size:clamp(38px,4vw,55px);margin-bottom:22px}
-.press-intro>p:last-child{font-size:16px;color:#526670;max-width:440px;line-height:1.85;margin-bottom:0}
-.press-article{border-top:3px solid var(--orange);padding:28px 30px;background:var(--paper)}
-.press-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}
-.press-publication{font-family:Georgia,serif;font-size:29px;font-weight:700;letter-spacing:-1px;color:var(--navy)}
-.press-meta time{font-size:14px;color:#536771}
-.press-category{font-size:14px;letter-spacing:1.6px;color:#9c401b;font-weight:600}
-.press-article h3{font-family:var(--display);font-size:32px;line-height:1.15;font-weight:600;margin:14px 0 26px}
-.press-link{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;font-size:14px;font-weight:650;padding:12px 0;border-bottom:1px solid #9c401b;color:#9c401b}
+/* Destaques: encontros, apresentações e cobertura na imprensa. */
+.press-section{position:relative;padding:80px 0;background:#e9eeeb;border-bottom:1px solid #d3ddda}
+.section-anchor{position:absolute;top:0}
+.highlights-heading{display:flex;justify-content:space-between;align-items:end;gap:60px;margin-bottom:40px}
+.highlights-heading h2{font-size:clamp(40px,4vw,58px);margin-bottom:0}
+.highlights-heading>p{max-width:350px;color:#526670;font-size:16px;line-height:1.8;margin:0 0 3px}
+.highlight-event{background:var(--paper);border-top:3px solid var(--orange)}
+.event-layout{display:grid;grid-template-columns:1fr 1.1fr}
+.event-photo{margin:0;padding:28px 0 28px 28px}
+.event-photo>a{display:block}
+.event-photo img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 74%}
+.event-photo figcaption{font-size:14px;line-height:1.6;color:#526670;margin-top:14px}
+.event-copy{padding:32px 36px}
+.event-meta{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.event-meta time,.press-news time{font-size:15px;color:#526670}
+.event-copy h3{font-family:var(--display);font-size:42px;font-weight:600;line-height:1.1;margin:0 0 22px}
+.event-copy>p,.press-news p{font-size:16px;line-height:1.8;color:#526670;margin-bottom:16px}
+.sesmt-context{border-left:2px solid var(--orange);padding-left:16px;margin-top:24px}
+.sesmt-context strong{font-size:16px;font-weight:600;line-height:1.6}
+.sesmt-context p{font-size:15px;line-height:1.7;color:#526670;padding:0;margin:8px 0 0}
+.event-gallery{margin:0 28px;border-top:1px solid #d3ddda}
+.event-gallery summary{font-size:16px;padding:22px 0;color:var(--ink)}
+.event-gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-bottom:28px}
+.event-gallery-grid figure{margin:0;min-width:0}
+.event-gallery-grid a{display:block}
+.event-gallery-grid img{width:100%;height:auto;aspect-ratio:3/4;object-fit:contain}
+.event-gallery-grid figcaption{font-size:14px;line-height:1.6;color:#526670;margin-top:12px}
+.event-photo a:hover,.event-gallery-grid a:hover{outline:2px solid var(--orange);outline-offset:3px}
+.press-article{border-top:3px solid #a4b4b2;padding:30px;background:var(--paper)}
+.press-news{display:grid;grid-template-columns:.55fr 1.45fr;gap:48px;margin-top:28px}
+.press-news-intro{display:flex;align-items:start;flex-direction:column;gap:16px}
+.press-publication{font-family:Georgia,serif;font-size:32px;font-weight:700;letter-spacing:-1px;color:var(--navy)}
+.press-category{font-size:14px;letter-spacing:1px;color:#9c401b;font-weight:600}
+.press-article h3{font-family:var(--display);font-size:34px;line-height:1.15;font-weight:600;margin:0 0 18px;max-width:740px}
+.press-link{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;font-size:16px;font-weight:650;padding:10px 0;border-bottom:1px solid #9c401b;color:#9c401b}
 .press-link:hover{color:var(--navy);border-color:var(--navy)}
 .press-link>span[aria-hidden]{font-size:20px;line-height:1}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
-@media(max-width:800px){.press-section{padding:50px 0}.press-grid{grid-template-columns:1fr;gap:30px}.press-intro>p:last-child{max-width:600px}.press-article{padding:24px}.press-meta{flex-wrap:wrap;gap:10px;margin-bottom:25px}.press-article h3{font-size:30px}.press-link{font-size:14px}}
+@media(max-width:1100px){.event-copy{padding:28px}.event-copy h3{font-size:38px}.event-gallery-grid{gap:16px}.press-news{gap:30px}}
+@media(max-width:800px){
+ .press-section{padding:60px 0}
+ .highlights-heading{display:block;margin-bottom:30px}
+ .highlights-heading>p{max-width:550px;margin-top:22px}
+ .event-layout{grid-template-columns:1fr}
+ .event-photo{padding:20px 20px 0}
+ .event-copy{padding:26px 20px}
+ .event-copy h3{font-size:36px}
+ .event-gallery{margin:0 20px}
+ .event-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px;padding-bottom:20px}
+ .press-news{grid-template-columns:1fr;gap:24px;padding:24px}
+ .press-news-intro{gap:10px}
+ .press-article h3{font-size:32px}
+}
+@media(max-width:400px){.event-gallery-grid{grid-template-columns:1fr}.event-photo img{aspect-ratio:1/1}.press-link{gap:12px}.event-copy h3{font-size:34px}}
 
 /* Identidade da escola e leitura confortável em todas as telas. */
 .header-brands{display:flex;align-items:center;gap:24px;flex-shrink:0}
