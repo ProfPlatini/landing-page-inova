@@ -31,6 +31,10 @@ document.querySelectorAll('.demo-tab').forEach(button => button.addEventListener
 document.querySelectorAll('video').forEach(player => player.addEventListener('play', () => {
   document.querySelectorAll('video').forEach(other => { if (other !== player) other.pause(); });
 }));
+// Fecha o vídeo junto com a galeria para evitar reprodução fora de vista.
+document.querySelectorAll('.event-gallery').forEach(gallery => gallery.addEventListener('toggle', () => {
+  if (!gallery.open) gallery.querySelectorAll('video').forEach(player => player.pause());
+}));
 const track = document.querySelector('#tech-track');
 const duplicate = track.querySelector('.tech-group').cloneNode(true);
 duplicate.setAttribute('aria-hidden', 'true');

@@ -144,3 +144,45 @@ nav{gap:24px}
  .signal-chain{gap:8px}
  .signal-chain div{font-size:14px}
 }
+
+/* DevFest: identidade do evento e registros da participação do LockSafe. */
+.highlight-event+.highlight-event{margin-top:32px}
+.devfest-event{border-top-color:#4285f4}
+.devfest-branding{display:flex;justify-content:space-between;align-items:center;gap:32px;padding:28px 32px;background:var(--navy)}
+.devfest-logo{width:260px;height:auto}
+.devfest-community{display:flex;align-items:center;gap:28px;color:white}
+.devfest-community strong{display:block;font-size:19px;font-weight:600}
+.devfest-community span{display:block;font-size:15px;color:#bacad6;margin-top:4px}
+.google-mark{background:white;padding:18px 20px;flex-shrink:0}
+.google-mark img{width:112px;height:auto}
+.devfest-event .event-photo img{height:auto;aspect-ratio:16/9;object-fit:contain}
+.devfest-location{margin-top:26px;padding-top:20px;border-top:1px solid #d3ddda;color:#526670}
+.devfest-location span{display:block;font-size:15px}
+.devfest-location strong{display:block;font-size:19px;color:var(--ink);margin-top:6px;font-weight:550}
+.event-links{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:22px}
+.event-links .press-link{font-size:15px;gap:12px}
+.event-copy>.event-source-note{font-size:14px;line-height:1.65;margin:16px 0 0}
+.devfest-video{max-width:320px;margin:6px auto 34px;padding:0}
+.devfest-video video{aspect-ratio:9/16;object-fit:contain}
+.devfest-video figcaption{font-size:14px;color:#526670;line-height:1.7;margin-top:12px}
+.devfest-gallery .event-gallery-grid{display:block;columns:3 230px;column-gap:20px}
+.devfest-gallery .event-gallery-grid figure{break-inside:avoid;margin-bottom:24px}
+.devfest-gallery .event-gallery-grid img{aspect-ratio:auto;object-fit:contain;height:auto}
+@media(max-width:800px){
+ .devfest-branding{flex-direction:column;align-items:start;padding:24px 20px;gap:24px}
+ .devfest-logo{width:230px;max-width:100%}
+ .devfest-community{gap:20px;justify-content:space-between;width:100%;flex-wrap:wrap}
+ .google-mark{padding:12px 14px}
+ .google-mark img{width:92px}
+ .devfest-community strong{font-size:18px}
+ .devfest-community span{font-size:14px}
+ .devfest-location{margin-top:20px}
+ .event-links{flex-direction:column;align-items:start}
+ .devfest-gallery .event-gallery-grid{columns:2 180px}
+}
+@media(max-width:400px){
+ .devfest-community{gap:16px}
+ .devfest-gallery .event-gallery-grid{columns:1}
+ .devfest-video{max-width:100%}
+ .event-links .press-link{font-size:14px}
+}
